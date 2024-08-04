@@ -1,0 +1,40 @@
+name: crudsito
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.1
+  bloc: ^8.0.1
+  http: ^0.13.4
+  equatable: ^2.0.3
+  cupertino_icons: ^1.0.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+ 
+  flutter_lints: ^3.0.0
+
+flutter:
+
+  uses-material-design: true
+
+# Add environment setup for CI/CD
+build:
+  commands:
+    - echo "Installing Flutter..."
+    - git clone https://github.com/flutter/flutter.git -b stable --depth 1
+    - export PATH="$PATH:`pwd`/flutter/bin"
+    - flutter doctor
+    - flutter pub get
+    - echo "Building Flutter Web app..."
+    - flutter build web
+    - echo "Build completed!"
