@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         RepositoryProvider<AutoRepository>(
           create: (context) => AutoRepository(
               apiUrl:
-                  'https://db3jebyot6.execute-api.us-east-1.amazonaws.com/Prod'),
+                  'https://y046v6i6f5.execute-api.us-east-1.amazonaws.com/Prod'),
         ),
       ],
       child: MultiBlocProvider(
